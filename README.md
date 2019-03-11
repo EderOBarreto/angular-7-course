@@ -25,3 +25,18 @@ app.module.ts : This file make the imports of libraries been used in the project
 
 TypeScript is a addition to JavaScript that offers more features as Types, Classes, Interfaces, etc.
 TypeScript is compiled to JavaScript.
+
+# Node Modules 
+
+node_modules contains all the files of the libraries been used in the project.
+
+# Components
+
+Components are the parts that are used to build the application, every application has its own root component.
+Each component has its own template, stylesheet and business logic.
+Decorators are used in components. Example: @Component.
+Components must have a template, however style and selector are optional.
+
+# Decorator
+
+Decorator is a TypeScript feature that enhance classes, elements that are used in your code, is not restricted to classes but is often used with them.
