@@ -59,3 +59,48 @@ styles: Is used to add CSS stylesheet. ```(e.g. p {color: orange})```
 ## Decorator
 
 Decorator is a TypeScript feature that enhance classes, elements that are used in your code, is not restricted to classes but is often used with them.
+
+## Databinding
+
+Databinding = Communication
+
+Output Data:
+
+String Interpolation (```{{data}}```)
+
+Property Binding (```[properties] = "data" ```)
+
+React to Events:
+
+Event Binding (```(event) = "expression" ```)
+
+Two-Way-Binding(```[(ngModel)] = "data" ```)
+
+### Property binding vs String Interpolation
+
+String Interpolation must be used just to show some text in the page.
+
+Property Binding must be used when is needed to change the state of some component.
+
+## Variable Declaration
+
+```variableName : type = value;```
+
+## Event Binding
+
+...
+
+# Important libraries and how to install them
+
+Install example: npm install namePackage --save
+
+## Important libraries
+
+BootStrap : Used to stylesheet.
+
+FormsModule: Used to get input from some field.
+
+
+
+
+
