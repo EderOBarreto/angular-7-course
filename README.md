@@ -100,6 +100,26 @@ BootStrap : Used to stylesheet.
 
 FormsModule: Used to get input from some field.
 
+## Directives
+
+Directives are Instructions in the DOM.
+
+### Built-in Directives 
+
+ngIf = ``` *ngIf = "serverCreated" ```
+
+ngIf with else = ```<p *ngIf = "serverCreated; else noServer"> Server was created, server name is {{ serverName }} </p>
+                    <ng-template #noServer>
+                        <p>No server was created!</p>
+                    </ng-template>
+                    ```
+
+ngStyle = ```[ngStyle] = "{backgroundColor: getcolor()}"```
+
+ngClass = ```[ngClass] = "{online: getServerStatus() === 'online'}"```
+
+ngFor =  ``` *ngFor="let server of servers" ```
+
 
 
 
