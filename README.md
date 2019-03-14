@@ -120,6 +120,100 @@ ngClass = ```[ngClass] = "{online: getServerStatus() === 'online'}"```
 
 ngFor =  ``` *ngFor="let server of servers" ```
 
+## Components and Databinding
+
+### Custom properties binding
+
+@Input() : It is a decorator that allows a property be visible outside its class.
+
+@Input('test') : When you put some string inside of the parenteses that string passes to reference the varible outside the class.
+
+@Output() : It is a decorator that can emit a event with parameters when it's activered.
+
+To use a predefined method inside a tag:
+
+1. Declare the event:
+
+```@Output() nameEvent = new EventEmitter<parameters>(); ```
+
+The behavior of the EventEmitter seems like a Observer notifying the Subject that is waiting for something event to happen to do something.
+
+is posible add a custom name for this event too
+
+```@Output('otherName') nameEvent = new EventEmitter<parameters>(); ```
+
+2. Define some method to use the Event and fill out the parameters.
+
+```method(){```
+
+```this.nameEvent.emit(parameters);```
+  
+```}```
+
+3. add the event in the tag:
+
+```<app-test (nameEvent) = "method($event)" ></app-test>```
+
+
+## View Encapsulation
+
+There is 3 types of encapsulation.
+
+encapsulation: ViewEncapsulation.None : Use this when you need that some style be applied globally.
+
+encapsulation: ViewEncapsulation.Native : Use this when you want to give to each tag its own style, but this is not supported for some browsers.
+
+encapsulation: ViewEncapsulation.Emulated : Use this when you need emulate the Shadow DOM, this view encapsulation can be used by most part of the browsers.
+
+## Local Reference
+
+How to declare:
+
+<input type="text" #localReference>
+
+How to use:
+
+<button (click) = "doSomething(localReference)"></button>
+
+The local reference can be just used in the template, the local reference returns the element in which it was put in. Like in this example is possible to retrieve that value of element, but just because is a input element, each element has his own properties and possibities of use.
+
+Projecting Content into Components 
+
+The default behavior of the angular ignore the content inside the open and close tag of your component. But is possible to show the content inside the tags with the ```<ng-content><\ng-content> ``` , this way the content will appear where the tag
+was placed.
+
+### Component lifecycle
+
+ngOnChanges : Called after a bound input property changes.
+
+ngOnInit : Called once the component is inialized.
+
+ngDoCheck : Called during every change detection run.
+
+ngAfterContentInit : Called after content (ng-content) has been projected view.
+
+ngAfterViewInit : Called after the component's view (and child views) has been initialized.
+
+ngAfterViewChecked : Called every time the view (and child views) have been checked.
+
+ngOnDestroy : Called once the component is about to be destroyed.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
