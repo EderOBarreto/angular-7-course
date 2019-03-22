@@ -1,0 +1,26 @@
+<div class="row">
+  <div class="col-xs-12 col-sm-4">
+    <div class="list-group">
+      <a
+        [routerLink] = "['/servers', server.id ]"
+        [queryParams] = "{allowEdit: server.id === 3 ? '1' : '0' }"
+        fragment = "loading"
+        href="#"
+        class="list-group-item"
+        *ngFor="let server of servers">
+        {{ server.name }}
+      </a>
+      <!-- Fragments refer to certain elements on elements on the page
+      identified wit han id attribute -->
+      <!-- queryParams may be will be deprecated in the future
+      so instead use queryParamMap that is better -->
+    </div>
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    <router-outlet></router-outlet>
+    <!-- <button class="btn btn-primary" (click) = "onReload()">Reload Page</button> -->
+    <!-- Watch out! the routerLink is relative to the current page been shown-->
+    <!-- <a routerLink = "../servers"> Reload Page </a> -->
+  </div>
+</div>
+
