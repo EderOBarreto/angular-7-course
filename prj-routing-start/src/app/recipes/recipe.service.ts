@@ -6,6 +6,7 @@ import { ShoppingService } from '../shopping-list/shopping.service';
 
 @Injectable({providedIn: 'root'})
 export class RecipeService {
+    
     recipes: Recipe[] = [
         new Recipe('A Test Recipe',
         'This is simply a test',
